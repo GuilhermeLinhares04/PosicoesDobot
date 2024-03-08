@@ -18,20 +18,21 @@ def post():
     z = request.form['z']
     r = request.form['r']
     robot_table.insert({'x': x, 'y': y, 'z': z, 'r': r})
-    return render_template('caminho.html', message=('Posição salva com sucesso!'))
+    caminhos = db.all()
+    return render_template('index.html', x=x, y=y, z=z, r=r, caminhos=caminhos)
 
 # Rota para receber o id do caminho e devolver as posições
 @app.route('/pegar_caminho/<int:id>')
 def caminho(id):
     robot = Query()
     result = robot_table.get(doc_id=id)
-    return render_template('caminho.html', result=result)
+    return render_template('index.html', result=result)
 
 # Rota para listar todos os caminhos
 @app.route('/listar_caminhos')
 def caminhos():
-    caminhos = robot_table.all()
-    return render_template('caminhos.html', caminhos=caminhos)
+    caminhos = db.all()
+    return render_template('index.html', caminhos=caminhos)
 
 # Rota para atualizar as posições
 @app.route('/atualizar_caminho/<int:id>', methods=['POST'])
@@ -42,13 +43,13 @@ def atualizar_caminho(id):
     z = request.form['z']
     r = request.form['r']
     robot_table.update({'x': x, 'y': y, 'z': z, 'r': r}, doc_ids=[id])
-    return redirect(url_for('caminhos'))
+    return redirect(url_for('index'))
 
 # Rota para deletar um caminho
 @app.route('/deletar_caminho/<int:id>')
 def deletar_caminho(id):
     robot_table.remove(doc_ids=[id])
-    return redirect(url_for('caminhos'))
+    return redirect(url_for('index'))
 
 if __name__ == '__main__':
     app.run(debug=True)

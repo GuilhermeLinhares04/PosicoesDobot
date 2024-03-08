@@ -20,9 +20,22 @@
         <input type="number" name="r" id="r" required><br><br>
         
         <input type="submit" value="Cadastrar"><br><br>
-        <input type="submit" value="Visualizar" onclick="window.location.href='/caminho'"><br><br>
-
 
     </form>
 </body>
+
+<body>
+    <h1>Lista de Caminhos Registrados</h1>
+    <p>{{ x }}, {{ y }}, {{ z }}, {{ r }}</p>
+    
+    <ul>
+        {% for caminho in caminhos %}
+            <li>{{ caminho.x }}</li>
+            <li>{{ caminho.y }}</li>
+            <li>{{ caminho.z }}</li>
+            <li>{{ caminho.r }}</li>
+        {% endfor %}
+    </ul>
+</body>
+
 </html>
