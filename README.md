@@ -9,11 +9,11 @@
 5. Executar o arquivo main.py através do terminal utilizando o comando ``python -m flask --app src/main run``
 
 # Descrição das pastas e arquivos:
-``src:`` Pasta com os códigos do projeto
-``venv:`` Pasta com o ambiente virtual
-``.gitignore:`` Arquivo que contém os arquivos que não devem ser enviados para o repositório
-``README.md:`` Arquivo com a descrição do projeto
-``requirements.txt:`` Arquivo com as dependências do projeto
-``caminhos.json:`` Arquivo que armazena caminhos registrados
-``main.py:`` Arquivo que contém o código do projeto
-``template:`` Pasta que contém os htmls do projeto
+``src:`` Pasta com os códigos do projeto <br>
+``venv:`` Pasta com o ambiente virtual <br>
+``.gitignore:`` Arquivo que contém os arquivos que não devem ser enviados para o repositório <br>
+``README.md:`` Arquivo com a descrição do projeto <br>
+``requirements.txt:`` Arquivo com as dependências do projeto <br>
+``caminhos.json:`` Arquivo que armazena caminhos registrados <br>
+``main.py:`` Arquivo que contém o código do projeto <br>
+``template:`` Pasta que contém os htmls do projeto <br>
