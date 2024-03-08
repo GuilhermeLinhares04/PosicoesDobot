@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro de Coordenadas do Robô</title>
+</head>
+<body>
+    <h1>Cadastro de Coordenadas do Robô</h1>
+    
+    <form action="/novo" method="POST">
+        <label for="x">Coordenada X:</label>
+        <input type="number" name="x" id="x" required><br><br>
+        
+        <label for="y">Coordenada Y:</label>
+        <input type="number" name="y" id="y" required><br><br>
+        
+        <label for="z">Coordenada Z:</label>
+        <input type="number" name="z" id="z" required><br><br>
+        
+        <label for="r">Coordenada R:</label>
+        <input type="number" name="r" id="r" required><br><br>
+        
+        <input type="submit" value="Cadastrar"><br><br>
+        <input type="submit" value="Visualizar" onclick="window.location.href='/caminho'"><br><br>
+
+
+    </form>
+</body>
+</html>

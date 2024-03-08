@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Caminhos</title>
+</head>
+<body>
+    <h1>Lista de Caminhos Registrados</h1>
+    <p>{{ x }}</p>
+    <p>{{ y }}</p>
+    <p>{{ z }}</p>
+    <p>{{ r }}</p>
+    <ul>
+        {% for caminho in caminhos %}
+            <li>{{ caminho.x }}</li>
+            <li>{{ caminho.y }}</li>
+            <li>{{ caminho.z }}</li>
+            <li>{{ caminho.r }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
